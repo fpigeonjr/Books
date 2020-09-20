@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS</title>
+  <style>
+    :root{
+      --main-font: Helvetica, Arial, sans-serif;
+      --main-color: #000;
+      --main-bg: #fff;
+    }
+    
+    .panel{
+      font-size: 1rem;
+      padding: 1em;
+      border: 1px solid #999;
+      background-color: var(--main-bg);
+      color: var(--main-color);
+    }
+
+    .panel > h2{
+      margin-top: 0;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .dark {
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #999;
+      --main-bg: #333;
+      --main-color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="panel">
+      <h2>Single-origin</h2>
+      <div class="body">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, rerum! Eum, saepe! Nihil ducimus tenetur error fugiat ipsa laboriosam dolorum dolorem itaque aspernatur, necessitatibus magnam excepturi obcaecati a cumque eos?
+      </div>
+    </div>
+    
+    <aside class="dark">
+      <div class="panel">
+        <h2>Single-origin</h2>
+        <div class="body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officiis illo, cum modi doloremque dolorem autem nemo dignissimos voluptatibus et ipsam tempora quia, dolor vitae! Laboriosam et dolores blanditiis consequuntur?
+        </div>
+      </div>
+    </aside>
+  </main>
+  <script>
+    let rootElement = document.documentElement
+    rootElement.style.setProperty('--main-bg', 'rebeccapurple')
+    rootElement.style.setProperty('--main-color', 'white')
+
+  </script>
+</body>
+</html>
