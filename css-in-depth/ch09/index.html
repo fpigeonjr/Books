@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CH09</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="message">Save successful</div>
-  <div class="message message--error">Invalid password</div>
-  <button class="button button--large">Read More</button>
-  <button class="button button--success">Save</button>
-  <button class="button button--danger button--small">Cancel</button>
-
-  <div class="media media--right">
-    <img src="runner.png" alt="runner" class="media__image">
-    <div class="media__body">
-      <h4>Strength</h4>
-      <p>Strength training is an important part of injury prevention. Focus on your core&dash;especially your abs and glutes.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH09</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropdown__toggle">Main Menu</button>
+      <div class="dropdown__drawer">
+        <div class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/coffees">Coffee</a></li>
+          <li><a href="/brewers">Brewers</a></li>
+          <li><a href="/specials">Specials</a></li>
+          <li><a href="/about">About</a></li>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
+    <div class="message">Save successful</div>
+    <div class="message message--error">Invalid password</div>
+    <button class="button button--large">Read More</button>
+    <button class="button button--success">Save</button>
+    <button class="button button--danger button--small">Cancel</button>
+
+    <div class="media media--right">
+      <img src="runner.png" alt="runner" class="media__image" />
+      <div class="media__body">
+        <h4>Strength</h4>
+        <p>
+          Strength training is an important part of injury prevention. Focus on
+          your core&dash;especially your abs and glutes.
+        </p>
+      </div>
+    </div>
+    <script>
+      ;(function () {
+        const toggle = document.querySelector('.dropdown__toggle')
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault()
+          const dropdown = e.target.parentNode
+          dropdown.classList.toggle('is-open')
+        })
+      })()
+    </script>
+  </body>
 </html>
