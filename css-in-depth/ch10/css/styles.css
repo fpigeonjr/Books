@@ -17,8 +17,8 @@ Media
 
 Displays an image on the left and body content on the right.
 
-Markup: 
-<div class="media">
+Markup:   
+<div class="media"> 
   <img src="http://placehold.it/150x150" alt="" class="media__image" />
   <div class="media__body">
     <h4>Strength</h4>
@@ -31,27 +31,35 @@ Markup:
   </div>
 </div>
 
+<div class="media"> 
+  <img src="http://placehold.it/150x150" alt="" class="media__image" />
+  <div class="media__body">
+    <h4>Strength</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos
+      consectetur, voluptatum asperiores assumenda quas quibusdam quam adipisci
+      dolor. Hic quam earum, ea quaerat cupiditate beatae ut nam laboriosam
+      distinctio.
+    </p>
+  </div>
+  <img src="http://placehold.it/150x150" alt="" class="media__image" />
+</div>
+
 Styleguide Media
 */
 .media {
+  display: flex;
+  align-items: flex-start;
   padding: 1.5em;
   background-color: #eee;
   border-radius: 0.5em;
 }
 
-.media::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.media__image {
-  float: left;
-  margin-right: 1.5em;
+.media > * + * {
+  margin-left: 1.5em;
 }
 
 .media__body {
-  overflow: auto;
   margin-top: 0;
 }
 
