@@ -15,5 +15,6 @@ img {
   /* transform: rotate(15deg); */
   /* transform: skew(-20deg); */
   /* transform: scale(1.5); */
-  transform: translate(20px, 40px);
+  /* transform: translate(20px, 40px); */
+  transform: rotate(15deg) translate(20px, 0);
 }
